@@ -42,6 +42,16 @@ function generatePassword(){
     return passNum;
   }
 
+  function funcUpper() {
+    passUpper = confirm("Would you like to include upper-case letters in your password?");
+    return passUpper;
+  }
+
+  function funcLower() {
+    passLower = confirm("Would you like to include lower-case letters in your password?");
+    return passLower;
+  }
+
   funcLength();
   console.log("Chosen length: " + passLength);
 
@@ -50,6 +60,14 @@ function generatePassword(){
 
   funcNum();
   console.log("Wants to include numbers: " + passNum);
+
+  funcUpper();
+  console.log("Wants to include uppercase: " + passUpper);
+
+  funcLower();
+  console.log("Wants to include lowercase: " + passLower);
+
+  
 
 
 }
