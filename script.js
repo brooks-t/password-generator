@@ -4,8 +4,11 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
   //TODO: your code here
-  
-
+  var passLength = 0;
+  var passChars = [];
+  var passNums = [];
+  var passUppercase = [];
+  var passLowercase = [];
 }
 
 // Write password to the #password input
