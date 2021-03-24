@@ -4,11 +4,13 @@ var generateBtn = document.querySelector("#generate");
 
 function generatePassword(){
   //TODO: your code here
-  var passLength = 0;
+  var passLength = 8;
   var passSpecial = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "<", ">", "=", "?", "@", "^", "{", "}", "~"];
-  var passNumeric = [];
-  var passUppercase = [];
-  var passLowercase = [];
+  var passNumeric = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
+  var passUppercase = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+  var passLowercase = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
+
+
 
 
 }
