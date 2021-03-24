@@ -68,7 +68,7 @@ function generatePassword(){
   //this function is where the magic happens. the password is randomly generated from the four arrays up to the user's desired length
   function randomizePass() {
     var randomCharacter = "";
-    for (var i = 0; i < passLength; i++) {
+    while (myPassword.length < passLength) {
       var randomType = Math.floor(Math.random()*4);
       if (passSpec === true && randomType === 0) {
         randomCharacter = specArray[Math.floor(Math.random()*specArray.length)];
