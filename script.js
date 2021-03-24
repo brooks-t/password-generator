@@ -12,6 +12,7 @@ function generatePassword(){
   var passNum = true;
   var passUpper = true;
   var passLower = true;
+  var myPassword = "";
 
   var specArray = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "<", ">", "=", "?", "@", "^", "{", "}", "~"];
   var numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
@@ -62,6 +63,29 @@ function generatePassword(){
     }
   }
 
+  //TODO: create function that takes all of user inputs and generates a password then returns that password
+
+  function randomizePass() {
+    var randomCharacter = "";
+    for (var i = 0; i < passLength; i++) {
+      var randomType = Math.floor(Math.random()*4);
+      if (passSpec === true && randomType === 0) {
+        randomCharacter = specArray[Math.floor(Math.random()*specArray.length)];
+        myPassword = myPassword.concat(randomCharacter);
+      } else if (passNum === true && randomType === 1) {
+        randomCharacter = numArray[Math.floor(Math.random()*numArray.length)];
+        myPassword = myPassword.concat(randomCharacter);
+      } else if (passUpper === true && randomType === 2) {
+        randomCharacter = upperArray[Math.floor(Math.random()*upperArray.length)];
+        myPassword = myPassword.concat(randomCharacter);
+      } else if (passLower === true && randomType === 3) {
+        randomCharacter = lowerArray[Math.floor(Math.random()*lowerArray.length)];
+        myPassword = myPassword.concat(randomCharacter);
+      }
+    }
+    return myPassword;
+  }
+
   funcLength();
   console.log("Chosen length: " + passLength);
 
@@ -80,8 +104,9 @@ function generatePassword(){
   passCheck();
   console.log("Whew! Made it this far without any issues!");
 
-
-
+  randomizePass();
+  console.log(myPassword);
+  return myPassword;
 
 }
 
