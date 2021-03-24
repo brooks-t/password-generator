@@ -9,6 +9,10 @@ var generateBtn = document.querySelector("#generate");
 function generatePassword(){
   var passLength = 8;
   var passSpec = true;
+  var passNum = true;
+  var passUpper = true;
+  var passLower = true;
+
   var specArray = ["!", "#", "$", "%", "&", "(", ")", "*", "+", "<", ">", "=", "?", "@", "^", "{", "}", "~"];
   var numArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
   var upperArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
@@ -33,11 +37,19 @@ function generatePassword(){
     return passSpec;
   }
 
+  function funcNum() {
+    passNum = confirm("Would you like to include numbers in your password?");
+    return passNum;
+  }
+
   funcLength();
   console.log("Chosen length: " + passLength);
 
   funcSpecial();
   console.log("Wants to include special characters: " + passSpec);
+
+  funcNum();
+  console.log("Wants to include numbers: " + passNum);
 
 
 }
