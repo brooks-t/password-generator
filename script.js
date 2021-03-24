@@ -52,6 +52,16 @@ function generatePassword(){
     return passLower;
   }
 
+  function passCheck() {
+    if (passSpec === false && passNum === false && passUpper === false && passLower === false) {
+      alert("Error. You must include atleast one character type in your password. Please try again.");
+      generatePassword();
+    }
+    else {
+      return;
+    }
+  }
+
   funcLength();
   console.log("Chosen length: " + passLength);
 
@@ -67,7 +77,10 @@ function generatePassword(){
   funcLower();
   console.log("Wants to include lowercase: " + passLower);
 
-  
+  passCheck();
+  console.log("Whew! Made it this far without any issues!");
+
+
 
 
 }
