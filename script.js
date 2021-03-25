@@ -32,7 +32,7 @@ function generatePassword(){
         return passLength;
       } 
   }
-
+  
   //the following four functions confirm whether or not the user wants to include that character type
   function funcSpecial() {
     passSpec = confirm("Would you like to include special characters in your password?");
